@@ -13,6 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.11.0",
+    "@types/amqplib": "^0.10.5",
+    "amqplib": "^0.10.4",
     "dotenv": "^16.4.5",
     "http-status": "^1.7.4",
     "object-hash": "^3.0.0",

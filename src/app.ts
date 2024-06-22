@@ -1,7 +1,9 @@
+import * as amqp from "./lib/amqp";
 import config from "./config/base.config";
 import logger from "./utils/logger";
 import { scrape } from "./scrapper";
 import { scrapeTheDailyStar } from "./scrapper/target/theDailyStar";
+import amqpConfig from "./config/amqp.config";
 
 const sources = {
   // THE_DAILY_STAR: "https://www.thedailystar.net/todays-news",
@@ -19,6 +21,7 @@ const startScrapping = async () => {
 
 const main = async () => {
   try {
+    await amqp.init(amqpConfig.EXCHANGES, amqpConfig.QUEUES, amqpConfig.BINDINGS);
     startScrapping();
   } catch (err) {
     logger.error("Main Start Issue!");
