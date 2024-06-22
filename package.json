@@ -1,0 +1,27 @@
+{
+  "name": "gorom-chaa-scrapper-service",
+  "version": "0.1.0",
+  "description": "GoromChaa's Scrapper Service.",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "ts-node src/app.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Srejon Khan",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.11.0",
+    "dotenv": "^16.4.5",
+    "http-status": "^1.7.4",
+    "object-hash": "^3.0.0",
+    "puppeteer": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.11.0"
+  }
+}
